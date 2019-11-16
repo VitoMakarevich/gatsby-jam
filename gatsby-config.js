@@ -1,3 +1,7 @@
+const contentfulConfig = require('./contentful.json')
+
+const isProduction = process.env.NODE_ENV === 'production'
+
 module.exports = {
   siteMetadata: {
     title: `Gatsby Default Starter`,
@@ -6,6 +10,14 @@ module.exports = {
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
+    `gatsby-plugin-typescript`,
+    {
+      resolve: `gatsby-source-contentful`,
+      options: {
+        spaceId: contentfulConfig.production.spaceId,
+        accessToken: contentfulConfig.production.accessToken,
+      }
+    },
     {
       resolve: `gatsby-source-filesystem`,
       options: {

@@ -1,0 +1,8 @@
+.headerWrapper {
+    background: var(--primaryColor);
+    padding: 1rem;
+}
+
+.headerText {
+    color: white;
+}

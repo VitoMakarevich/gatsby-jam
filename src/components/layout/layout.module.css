@@ -1,0 +1,24 @@
+.generalGrid {
+    display: grid;
+    grid-template-areas:
+            "header"
+            "main"
+            "footer";
+    grid-template-rows: 3rem auto 3rem;
+    height: 100vh;
+}
+
+.header {
+    grid-area: header;
+}
+
+.main {
+    grid-area: main;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+.footer {
+    grid-area: footer;
+}
+

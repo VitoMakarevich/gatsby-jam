@@ -1,0 +1,22 @@
+.pageGrid {
+    display: grid;
+    grid-template-areas:
+"image image"
+"quoteFirst quoteSecond";
+    grid-template-rows: 2fr 1fr;
+    height: 100%;
+    width: 100%;
+    grid-gap: 1rem;
+}
+
+.imageContainer {
+    grid-area: image;
+}
+
+.quoteFirst {
+    grid-area: quoteFirst;
+}
+
+.quoteSecond {
+    grid-area: quoteSecond;
+}

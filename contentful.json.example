@@ -1,0 +1,6 @@
+{
+  "production":{
+    "spaceId":"spaceId",
+    "accessToken":"accessToken"
+  }
+}

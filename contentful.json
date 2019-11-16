@@ -1,0 +1,10 @@
+{
+  "production": {
+    "spaceId":"8mktgcmr1j9e",
+    "accessToken":"_zwdZN1xQeADq0TkQGn2Uth0HkANDdiBE9-JxR9GeKk"
+  },
+  "develop": {
+    "spaceId":"8mktgcmr1j9e",
+    "accessToken":"tfiuhG6dvgvj_M7XEwEVsC1dC8Olr0xY5sOkXjzpRqc"
+  }
+}
