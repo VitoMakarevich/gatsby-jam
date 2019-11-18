@@ -2,6 +2,7 @@ import React from "react"
 import styles from "./header.module.css"
 import { graphql, Link, StaticQuery } from "gatsby"
 import cx from "classnames"
+import Navbar from "./navbar"
 
 export type HeaderProps = {
   className?: string
@@ -22,6 +23,7 @@ export const Header: React.FC<HeaderProps> = ({ className }) => {
           <Link className={styles.headerText} to="/">
             {header}
           </Link>
+          <Navbar className={styles.navbar} />
         </div>
       )}
     />

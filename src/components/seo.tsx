@@ -20,26 +20,19 @@ export const SEO: React.FC<SEOProps> = ({
                                           meta = [],
                                           title,
                                         }) => {
-  // const { site } = useStaticQuery(
-  //   graphql`
-  //     query {
-  //       site {
-  //         siteMetadata {
-  //           title
-  //           description
-  //           author
-  //         }
-  //       }
-  //     }
-  //   `
-  // )
-  const site = {
-    siteMetadata: {
-      description: 'a',
-      author: 'b',
-      title: 'c'
-    }
-  }
+  const { site } = useStaticQuery(
+    graphql`
+      query {
+        site {
+          siteMetadata {
+            title
+            description
+            author
+          }
+        }
+      }
+    `
+  )
 
   const metaDescription = description || site.siteMetadata.description
 

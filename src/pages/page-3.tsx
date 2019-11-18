@@ -5,10 +5,12 @@ import Layout from "../components/layout/layout"
 import SEO from "../components/seo"
 
 const SecondPage: React.FC = () => {
-  debugger
   return (
     <>
-    dsadsa
+      <SEO title={'About'} />
+      <Layout>
+        About page
+      </Layout>
       </>
   )
 }

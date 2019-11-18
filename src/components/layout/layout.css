@@ -1,3 +1,13 @@
 body {
   font-family: "Aleo", Arial;
 }
+
+a {
+  text-decoration: none;
+  color: var(--linkColor);
+
+  &::visited {
+    text-decoration: none;
+    color: var(--linkColor);
+  }
+}

@@ -1,8 +1,17 @@
 .headerWrapper {
     background: var(--primaryColor);
     padding: 1rem;
+    overflow: hidden;
+    display: grid;
+    grid-template-areas: "root navbar";
+    grid-template-columns: 1fr auto;
 }
 
 .headerText {
     color: white;
+    grid-area: root;
+}
+
+.navbar {
+    grid-area: navbar;
 }
