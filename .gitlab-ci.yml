@@ -1,0 +1,9 @@
+image: node:lts-alpine
+
+pages:
+  script:
+    - npm i
+    - npm run build
+  artifacts:
+    paths:
+      - public
