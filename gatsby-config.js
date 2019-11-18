@@ -8,6 +8,7 @@ module.exports = {
     description: `Kick off your next, great Gatsby project with JAM.`,
     author: `@vitomakarevich`,
   },
+  pathPrefix: `/jam-blog`,
   plugins: [
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-typescript`,

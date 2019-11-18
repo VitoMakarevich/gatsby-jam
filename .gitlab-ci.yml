@@ -3,7 +3,7 @@ image: node:lts-alpine
 pages:
   script:
     - npm i
-    - npm run build
+    - npm run build -- --prefix-paths
   artifacts:
     paths:
       - public
