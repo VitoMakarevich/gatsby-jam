@@ -4,6 +4,7 @@ pages:
   script:
     - npm i
     - npm run build -- --prefix-paths
+    - gzip -k -6 $(find public -type f)
   artifacts:
     paths:
       - public
