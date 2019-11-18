@@ -7,6 +7,7 @@ module.exports = {
     title: `Jam blog`,
     description: `Kick off your next, great Gatsby project with JAM.`,
     author: `@vitomakarevich`,
+    siteUrl: 'https://vmakarevich.gitlab.io/jam-blog/'
   },
   pathPrefix: `/jam-blog`,
   plugins: [
