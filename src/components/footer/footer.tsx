@@ -1,14 +1,14 @@
-import React from "react"
-import cx from "classnames"
+import React from 'react'
+import cx from 'classnames'
+import { graphql, StaticQuery } from 'gatsby'
 import styles from './footer.module.css'
-import { graphql, StaticQuery } from "gatsby"
 
 export type FooterProps = {
-  className: string
+  className: string;
 }
 
-const Footer: React.FC<FooterProps> = ({className}) => {
-  return (<footer className={cx(className, styles.footer)}>
+const Footer: React.FC<FooterProps> = ({ className }) => (
+  <footer className={cx(className, styles.footer)}>
     <StaticQuery
       query={graphql`
         {
@@ -17,15 +17,15 @@ const Footer: React.FC<FooterProps> = ({className}) => {
           }
         }
       `}
-      render={({
-                 contentfulTitlePage: {footerText}}) => (
+      render={({ contentfulTitlePage: { footerText } }) => (
         <div className={styles.copyright}>
-          {footerText}{` `}
+          {footerText}
+          {' '}
           <a href="https://www.gatsbyjs.org">Gatsby</a>
         </div>
       )}
     />
-  </footer>)
-}
+  </footer>
+)
 
 export default Footer

@@ -1,25 +1,25 @@
-import React from "react"
-import Helmet from "react-helmet"
-import { useStaticQuery, graphql } from "gatsby"
+import React from 'react'
+import Helmet from 'react-helmet'
+import { useStaticQuery, graphql } from 'gatsby'
 
 type Meta = {
-  name: string
-  content: string
+  name: string;
+  content: string;
 }
 
 type SEOProps = {
-  description?: string
-  lang?: string
-  meta?: Meta[]
-  title: string
+  description?: string;
+  lang?: string;
+  meta?: Meta[];
+  title: string;
 }
 
 export const SEO: React.FC<SEOProps> = ({
-                                          description = '',
-                                          lang = 'en',
-                                          meta = [],
-                                          title,
-                                        }) => {
+  description = '',
+  lang = 'en',
+  meta = [],
+  title,
+}) => {
   const { site } = useStaticQuery(
     graphql`
       query {
@@ -31,7 +31,7 @@ export const SEO: React.FC<SEOProps> = ({
           }
         }
       }
-    `
+    `,
   )
 
   const metaDescription = description || site.siteMetadata.description
@@ -45,40 +45,38 @@ export const SEO: React.FC<SEOProps> = ({
       titleTemplate={`%s | ${site.siteMetadata.title}`}
       meta={[
         {
-          name: `description`,
+          name: 'description',
           content: metaDescription,
         },
         {
-          property: `og:title`,
+          property: 'og:title',
           content: title,
         },
         {
-          property: `og:description`,
+          property: 'og:description',
           content: metaDescription,
         },
         {
-          property: `og:type`,
-          content: `website`,
+          property: 'og:type',
+          content: 'website',
         },
         {
-          name: `twitter:card`,
-          content: `summary`,
+          name: 'twitter:card',
+          content: 'summary',
         },
         {
-          name: `twitter:creator`,
+          name: 'twitter:creator',
           content: site.siteMetadata.author,
         },
         {
-          name: `twitter:title`,
+          name: 'twitter:title',
           content: title,
         },
         {
-          name: `twitter:description`,
+          name: 'twitter:description',
           content: metaDescription,
         },
       ].concat(meta)}
     />
   )
 }
-
-export default SEO

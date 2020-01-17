@@ -1,10 +1,10 @@
-import React from "react"
-import { graphql, StaticQuery } from "gatsby"
+import React from 'react'
+import { graphql, StaticQuery } from 'gatsby'
 
-import Layout from "../components/layout/layout"
-import SEO from "../components/seo"
-import Img from "gatsby-image"
-import styles from "./index.module.css"
+import Img from 'gatsby-image'
+import Layout from '../components/layout/layout'
+import { SEO } from '../components/seo'
+import styles from './index.module.css'
 
 const IndexPage = () => (
   <>
@@ -44,11 +44,11 @@ const IndexPage = () => (
               <div className={styles.imageContainer}>
                 <Img
                   style={{
-                    maxWidth: "1000px",
-                    margin: "0 auto",
+                    maxWidth: '1000px',
+                    margin: '0 auto',
                   }}
                   fluid={fluid}
-                ></Img>
+                />
               </div>
               <blockquote className={styles.quoteFirst}>
                 {quoteAboutJamFirst}

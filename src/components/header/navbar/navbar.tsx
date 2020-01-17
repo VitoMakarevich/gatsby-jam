@@ -1,12 +1,16 @@
-import React from "react"
-import { graphql, Link, StaticQuery } from "gatsby"
-import { Menu } from "semantic-ui-react"
+import React, { useMemo } from 'react'
+import cx from 'classnames'
+import { graphql, Link, StaticQuery } from 'gatsby'
+import { Menu } from 'semantic-ui-react'
+import styles from './navbar.module.css'
 
 export type NavbarProps = {
-  className?: string
+  className?: string;
 }
 
 const Navbar: React.FC<NavbarProps> = ({ className }) => {
+  const cn = useMemo(() => cx(styles.menu, className), [className])
+
   return (
     <StaticQuery
       query={graphql`
@@ -18,9 +22,10 @@ const Navbar: React.FC<NavbarProps> = ({ className }) => {
       `}
       render={({ contentfulNavigation: { about } }) => (
         <>
-          <Menu className={className}>
-            <Menu.Item>
-              <Link to={"/about/"}>{about}</Link>
+          <Menu secondary className={cn}>
+            <Menu.Item as={Link} to="/about/" className={styles.item}>
+              {about}
+              {' '}
             </Menu.Item>
           </Menu>
         </>

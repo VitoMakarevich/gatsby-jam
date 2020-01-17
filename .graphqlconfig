@@ -1,0 +1,23 @@
+{
+  "name": "Untitled GraphQL Schema",
+  "schemaPath": "src/graphql/schema.graphql",
+  "extensions": {
+    "endpoints": {
+      "Dynamic": {
+        "url": "http://localhost:7000/graphql",
+        "headers": {
+          "user-agent": "JS GraphQL"
+        },
+        "introspect": false
+      },
+      "Static": {
+        "url": "https://graphql.contentful.com/content/v1/spaces/8mktgcmr1j9e",
+        "headers": {
+          "user-agent": "JS GraphQL",
+          "Authorization": "Bearer _zwdZN1xQeADq0TkQGn2Uth0HkANDdiBE9-JxR9GeKk"
+        },
+        "introspect": true
+      }
+    }
+  }
+}

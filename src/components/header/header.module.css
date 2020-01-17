@@ -7,9 +7,14 @@
     grid-template-columns: 1fr auto;
 }
 
+.headerTitle {
+    grid-area: root;
+    display: flex;
+    align-items: center;
+}
+
 .headerText {
     color: white;
-    grid-area: root;
 }
 
 .navbar {
