@@ -1,6 +1,19 @@
 .description {
-    overflow: hidden;
-    text-overflow: ellipsis;
-    word-break: break-all;
-    white-space: nowrap;
+    @util truncate;
+}
+
+.linkToSite {
+    color: initial;
+}
+
+.card {
+    width: 15rem;
+}
+
+.expandRotated {
+    transform: rotateZ(180deg);
+}
+
+.extendedDescription {
+    @util word-wrap(break-word)
 }

@@ -1,0 +1,14 @@
+.menu {
+    grid-area: menu;
+    justify-self: end;
+}
+
+.title {
+    grid-area: title;
+}
+
+.toolbar {
+    display: grid !important;
+    grid-template-areas: 'title menu';
+    grid-template-columns: 10rem auto;
+}

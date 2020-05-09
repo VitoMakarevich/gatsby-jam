@@ -2,9 +2,9 @@ import React from 'react'
 import { graphql, StaticQuery } from 'gatsby'
 
 import Img from 'gatsby-image'
-import Layout from '../components/layout/layout'
 import { SEO } from '../components/seo'
 import styles from './index.module.css'
+import { withLayout } from '../components/layout/withLayout'
 
 const IndexPage = () => (
   <>
@@ -39,7 +39,6 @@ const IndexPage = () => (
       }) => (
         <>
           <SEO title={title} description={description} />
-          <Layout>
             <div className={styles.pageGrid}>
               <div className={styles.imageContainer}>
                 <Img
@@ -57,11 +56,10 @@ const IndexPage = () => (
                 {quoteAboutJamSecond}
               </blockquote>
             </div>
-          </Layout>
         </>
       )}
     />
   </>
 )
 
-export default IndexPage
+export default withLayout(IndexPage)

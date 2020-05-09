@@ -3,6 +3,7 @@ import { graphql, StaticQuery } from 'gatsby'
 
 import Layout from '../components/layout/layout'
 import { SEO } from '../components/seo'
+import { withLayout } from '../components/layout/withLayout'
 
 const SecondPage: React.FC = () => (
   <StaticQuery
@@ -28,14 +29,12 @@ const SecondPage: React.FC = () => (
     }) => (
       <>
         <SEO title={title} description={description} />
-        <Layout>
           {' '}
           {aboutText}
           {' '}
-        </Layout>
       </>
     )}
   />
 )
 
-export default SecondPage
+export default withLayout(SecondPage)

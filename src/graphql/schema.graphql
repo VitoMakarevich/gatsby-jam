@@ -6,16 +6,41 @@ schema {
 }
 
 type Mutation {
-    delete(id: Int!): Post
+    createPost(post: CreatePostIn!): Post!
+    deletePost(id: Float!): Post!
+}
+
+type PaginatedPost {
+    items: [Post!]
+    meta: PostMeta
 }
 
 type Post {
     created: String!
     description: String
     id: Int!
+    updated: String!
     url: String!
 }
 
+type PostMeta {
+    currentPage: Int!
+    itemCount: Int!
+    itemsPerPage: Int!
+    totalItems: Int!
+    totalPages: Int!
+}
+
 type Query {
-    getPosts: [Post]!
+    getPosts(pagination: PaginationIn!): PaginatedPost!
+}
+
+input CreatePostIn {
+    description: String
+    url: String!
+}
+
+input PaginationIn {
+    limit: Int!
+    page: Int!
 }

@@ -18,6 +18,8 @@ module.exports = {
     'semi': [
       'error', 'never'
     ],
-    '@typescript-eslint/explicit-function-return-type': 'off'
+    '@typescript-eslint/explicit-function-return-type': 'off',
+    'import/extensions': 'off',
+    '@typescript-eslint/no-non-null-assertion': 'off'
   },
 }

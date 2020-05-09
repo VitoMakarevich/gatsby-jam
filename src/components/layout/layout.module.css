@@ -2,9 +2,8 @@
     display: grid;
     grid-template-areas:
             "header"
-            "main"
-            "footer";
-    grid-template-rows: auto 1fr 3rem;
+            "main";
+    grid-template-rows: auto 1fr;
     height: 100vh;
 }
 
