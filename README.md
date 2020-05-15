@@ -71,12 +71,12 @@ separate repo if backend will be on node-js
 2. Not real application, just example
 
 ## Project structure
-**src/components/** - shared components folder, can be in future extracted to separate repo
+**src/components/** - shared components folder, can be in future extracted to separate repo  
 **src/features/** - each feature implementation, because src/pages should contain route-sensitive information
-and doesn't allow to split code for decoupling logic
-**src/graphql/** - graphql related info, e.g. schema, fragments
-**src/pages/** - gatsby-specific folder for maintaining routing, each file or folder/index.js represents url
-**src/typings/** - typescript definition files for not supported initially extensions(e.g. css, svg) or libraries without *d.ts files
+and doesn't allow to split code for decoupling logic  
+**src/graphql/** - graphql related info, e.g. schema, fragments  
+**src/pages/** - gatsby-specific folder for maintaining routing, each file or folder/index.js represents url  
+**src/typings/** - typescript definition files for not supported initially extensions(e.g. css, svg) or libraries without *d.ts files  
    
 ## 🚀 Quick start
 
