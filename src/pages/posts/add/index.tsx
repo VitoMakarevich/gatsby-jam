@@ -4,7 +4,7 @@ import gql from 'graphql-tag'
 import { navigate } from '@reach/router'
 import { withLayout } from '../../../components/layout/withLayout'
 import { SEO } from '../../../components/seo'
-import { AddPostForm } from '../../../features/form/form'
+import { AddPostForm } from '../../../features/addItem/form/form'
 import { CreatePostIn } from '../../../graphql/graphql'
 
 const ADD_POST = gql`

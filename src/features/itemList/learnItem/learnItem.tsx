@@ -19,7 +19,7 @@ import {
   Typography,
 } from '@material-ui/core'
 import cx from 'classnames'
-import { Post } from '../../graphql/graphql'
+import { Post } from '../../../graphql/graphql'
 import styles from './learnItem.module.css'
 
 export type LearnItemOwnProps = {

@@ -5,9 +5,9 @@ import CachedIcon from '@material-ui/icons/Cached'
 import { makeStyles } from '@material-ui/core/styles'
 import cx from 'classnames'
 import * as yup from 'yup'
-import commonFormStyles from '../../components/form/common.module.css'
+import commonFormStyles from '../../../components/form/common.module.css'
 import styles from './form.module.css'
-import { CreatePostIn } from '../../graphql/graphql'
+import { CreatePostIn } from '../../../graphql/graphql'
 
 export type AddPostFormProps = {
   onSubmit: (post: CreatePostIn) => Promise<void>;
