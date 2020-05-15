@@ -1,7 +1,6 @@
 import React from 'react'
 import { graphql, StaticQuery } from 'gatsby'
 
-import Layout from '../components/layout/layout'
 import { SEO } from '../components/seo'
 import { withLayout } from '../components/layout/withLayout'
 
@@ -29,9 +28,9 @@ const SecondPage: React.FC = () => (
     }) => (
       <>
         <SEO title={title} description={description} />
-          {' '}
-          {aboutText}
-          {' '}
+        {' '}
+        {aboutText}
+        {' '}
       </>
     )}
   />

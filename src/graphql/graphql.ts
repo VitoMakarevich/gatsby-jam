@@ -29,8 +29,8 @@ export type MutationDeletePostArgs = {
 };
 
 export type PaginatedPost = {
-  meta?: Maybe<PostMeta>;
-  items?: Maybe<Array<Post>>;
+  meta: PostMeta;
+  items: Array<Post>;
 };
 
 export type PaginationIn = {

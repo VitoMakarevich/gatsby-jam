@@ -39,23 +39,23 @@ const IndexPage = () => (
       }) => (
         <>
           <SEO title={title} description={description} />
-            <div className={styles.pageGrid}>
-              <div className={styles.imageContainer}>
-                <Img
-                  style={{
-                    maxWidth: '1000px',
-                    margin: '0 auto',
-                  }}
-                  fluid={fluid}
-                />
-              </div>
-              <blockquote className={styles.quoteFirst}>
-                {quoteAboutJamFirst}
-              </blockquote>
-              <blockquote className={styles.quoteSecond}>
-                {quoteAboutJamSecond}
-              </blockquote>
+          <div className={styles.pageGrid}>
+            <div className={styles.imageContainer}>
+              <Img
+                style={{
+                  maxWidth: '1000px',
+                  margin: '0 auto',
+                }}
+                fluid={fluid}
+              />
             </div>
+            <blockquote className={styles.quoteFirst}>
+              {quoteAboutJamFirst}
+            </blockquote>
+            <blockquote className={styles.quoteSecond}>
+              {quoteAboutJamSecond}
+            </blockquote>
+          </div>
         </>
       )}
     />

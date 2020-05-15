@@ -4,9 +4,8 @@ import gql from 'graphql-tag'
 import { navigate } from '@reach/router'
 import { withLayout } from '../../../components/layout/withLayout'
 import { SEO } from '../../../components/seo'
-import { AddPostForm } from './form/form'
+import { AddPostForm } from '../../../features/form/form'
 import { CreatePostIn } from '../../../graphql/graphql'
-import { withGQL } from '../../../graphql/client'
 
 const ADD_POST = gql`
     mutation createPost($post: CreatePostIn!) {
@@ -38,4 +37,4 @@ export const AddPost: React.FC = () => {
   )
 }
 
-export default withGQL(withLayout(AddPost))
+export default withLayout(AddPost)

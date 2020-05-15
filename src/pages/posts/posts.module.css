@@ -1,6 +1,11 @@
-.page {
-    position: relative;
-    height: 100%;
+.list {
+    display: grid;
+    grid-gap: 1rem;
+    grid-template-columns: repeat(auto-fit, minmax(186px, 1fr));
+}
+
+.loader {
+    text-align: center;
 }
 
 .addButton {

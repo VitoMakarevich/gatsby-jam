@@ -5,11 +5,12 @@ import CachedIcon from '@material-ui/icons/Cached'
 import { makeStyles } from '@material-ui/core/styles'
 import cx from 'classnames'
 import * as yup from 'yup'
-import commonFormStyles from '../../../../components/form/common.module.css'
+import commonFormStyles from '../../components/form/common.module.css'
 import styles from './form.module.css'
+import { CreatePostIn } from '../../graphql/graphql'
 
 export type AddPostFormProps = {
-  onSubmit: (post: any) => Promise<void>;
+  onSubmit: (post: CreatePostIn) => Promise<void>;
   submitting: boolean;
 }
 
@@ -39,7 +40,6 @@ export const AddPostForm: React.FC<AddPostFormProps> = ({ onSubmit, submitting }
   })
   const { isValid, dirty } = formState
   const classes = useStyles()
-  console.log(errors)
 
   return (
     <div className={cx(styles.wrapper, classes.root)}>
